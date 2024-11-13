@@ -17,8 +17,8 @@
     <div id="header">
         <div class="container">
             <nav>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <!-- <i class="fa-solid fa-times" onclick="closemenu()"></i> -->
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -250,14 +250,22 @@
     </script>
     <!-----------Script for burger menu-->
     <script>
-        var sidemenu=document.getElementById("sidemenu");
+        // var sidemenu=document.getElementById("sidemenu");
 
-        function openmenu(){
-            sidemenu.style.right="0px";
-        }
-        function closemenu(){
-            sidemenu.style.right="-200px";
-        }
+        // function openmenu(){
+        //     sidemenu.style.right="0px";
+        // }
+        // function closemenu(){
+        //     sidemenu.style.right="-200px";
+        // }
+
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
 
     </script>
 
